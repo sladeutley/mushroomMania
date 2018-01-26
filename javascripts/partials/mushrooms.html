@@ -1,12 +1,14 @@
 <input type="text" ng-model="mushroomName">
 <br> 
-<input type="radio" name="poisonous" id="poisonous" ng-click="poisonous"> Poisonous
-<input type="radio" name="non-poisonous" id="non-poisonous" ng-click="non-poisonous"> Non-poisonous
+<input type="radio" name="isItPoisonous" ng-click="poisonous=true" ng-click="mushroom.edible"> Poisonous
+<input type="radio" name="isItPoisonous" ng-click="poisonous=false" ng-click="mushroom.edible"> Non-poisonous
 
 <h2>Here are yor mushrooms!</h2>
 <ul>
-    <li ng-repeat="mushroom in mushroomList | filter: mushroomName">
-        <a href="#!/mushrooms/{{mushroom.description}}">{{mushroom.name}}</a>
+    <li ng-if ="poisonous !== mushroom.edible" ng-repeat="mushroom in mushroomList | filter: mushroomName">
+        {{mushroom.name}} -
+        {{mushroom.description}}
+
     </li>
 </ul>
 
