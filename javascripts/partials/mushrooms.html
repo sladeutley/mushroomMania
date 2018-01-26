@@ -1,7 +1,9 @@
-<input type="text" ng-model="mushroomName">
+<input type="text" ng-model="mushroomName"> 
+<!-- ng-model is data that this partial will have value to. -->
+<!-- Every time the value changes, angular changes how its represented in the dom. angular takes care of dom manipulation for us -->
 <br> 
-<input type="radio" name="isItPoisonous" ng-click="poisonous=true" ng-click="mushroom.edible"> Poisonous
-<input type="radio" name="isItPoisonous" ng-click="poisonous=false" ng-click="mushroom.edible"> Non-poisonous
+<input type="radio" name="isItPoisonous" ng-click="poisonous=true" ng-model="mushroom.edible"> Poisonous
+<input type="radio" name="isItPoisonous" ng-click="poisonous=false" ng-model="mushroom.edible"> Non-poisonous
 
 <h2>Here are yor mushrooms!</h2>
 <ul>
