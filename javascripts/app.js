@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("hello");
-
 angular.module("funWithMushrooms", ["ngRoute"])
 .config($routeProvider => {
     $routeProvider

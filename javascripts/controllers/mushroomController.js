@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("funWithMushrooms").controller("MushroomController", function($scope, MushroomFactory) {
-    console.log('jeremy');
+    
     MushroomFactory.getMushrooms()
     .then( (mushroomData) => {
         console.log('mushroomData',mushroomData);
