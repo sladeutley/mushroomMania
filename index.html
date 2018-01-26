@@ -8,14 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
 </head>
-<bod ng-app="funWithMushrooms">
-    <input type="text" name="search" id="userInput">
-    <br> 
-    <input type="radio" name="poisonous" id="poisonous"> Poisonous
-    <input type="radio" name="non-poisonous" id="non-poisonous"> Non-poisonous
+<body ng-app="funWithMushrooms">
+
+
+    <div ng-view>
+
+    </div>
 
     <script src="javascripts/app.js"></script>
-    <script src="factories/mushroomFactory"></script>
-    <script src="controllers/mushroomController"></script>
+    <script src="javascripts/factories/mushroomFactory.js"></script>
+    <script src="javascripts/controllers/mushroomController.js"></script>
 </body>
 </html>
